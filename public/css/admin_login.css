@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.full-screen-container {
+  background-image: url("https://picsum.photos/1200/900");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: hsla(201, 93%, 22%, 0.4);
+  padding: 50px 30px;
+  min-width: 400px;
+  max-width: 500px;
+  width: 50%;
+}
+
+.login-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+.input-group input {
+  font-size: 1.5em;
+  padding: 0.1em 0.25em;
+  background-color: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: lighter;
+}
+
+.input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%);
+}
+
+.login-button {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: hsla(201, 100%, 50%, 0.8);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.error-message {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 135, 0.28895308123249297) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  font-weight: 100;
+  color: white;
+  padding: 10px;
+}
+
+.login-button:hover {
+  background-color: hsla(201, 100%, 91%, 0.3);
+}
+
+.login-button:active {
+  background-color: hsla(201, 100%, 91%, 0.5);
+}

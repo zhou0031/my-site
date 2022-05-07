@@ -1,0 +1,32 @@
+extends ../layout/layout
+include ../partials/_admin/_admin_mixin
+
+block css
+    +font_css
+    +admin_login_css
+
+block script 
+    <script defer src="https://www.recaptcha.net/recaptcha/api.js?"></script>
+    <script defer src="/js/google/recaptchaV3.js"></script>
+
+block body
+     div(class="full-screen-container") 
+        div(class="login-container")
+            h3(class="login-title") Welcome
+            include ../partials/_errorMessages
+            if messages.error
+                div(class="error-message") #{messages.error}
+            form(action='/admin' method="POST" id="form") 
+                div(class="input-group")
+                    label Username  
+                    input(type="text" id="username" name="username" value=admin)
+                div(class="input-group")    
+                    label Password  
+                    input(type="password" id="password" name="password")
+                button(type="submit" 
+                        class="login-button g-recaptcha"
+                        data-badge="bottomleft"
+                        data-sitekey="6LeRXVkaAAAAAOb-WsEJ9Hr24GrytKSu2nDuf3tJ"
+                        data-callback='onSubmit'
+                        data-action="submit") Log in
+            

@@ -1,0 +1,19 @@
+extends ./layout
+include ../partials/_admin/_admin_mixin
+
+block css
+    +font_css
+    +admin_page_css
+    block right-content-wrapper-css
+
+block script 
+    block admin-js
+
+block body
+    div(class="full-screen-flex-container") 
+        div(class="left-flex-panel")
+            include ../partials/_admin/_admin_menu
+        div(class="right-flex-panel")
+            div(class="right-panel-header")
+                include ../partials/_admin/_admin_header
+            block right-content-wrapper

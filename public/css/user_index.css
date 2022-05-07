@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 300;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.header div:last-child {
+  margin-left: auto;
+}
+
+.signout-button {
+  border: 1px solid rgba(206, 205, 205, 0.8);
+  outline: none;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(206, 205, 205, 0.8);
+  color: black;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.signout-button:hover {
+  background-color: hsla(200, 2%, 72%, 0.959);
+}
+
+.signout-button:active {
+  background-color: hsla(210, 3%, 86%, 0.781);
+}

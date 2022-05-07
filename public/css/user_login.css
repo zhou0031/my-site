@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.full-screen-container {
+  background: linear-gradient(to top right, #f16b1e, #77d3fd);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: hsla(201, 93%, 22%, 0.4);
+  padding: 50px 30px;
+  min-width: 400px;
+  max-width: 500px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+.input-group input {
+  font-size: 1.5em;
+  padding: 0.1em 0.25em;
+  background-color: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: lighter;
+}
+
+.input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%);
+}
+
+.input-group .forgot-password {
+  margin-left: auto;
+  font-weight: 100;
+  font-size: large;
+  color: white;
+}
+
+.login-button {
+  padding: 5px 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: hsla(201, 100%, 50%, 0.8);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.error-message {
+  background: linear-gradient(to right, #fd0000, #f1a095);
+  font-weight: 100;
+  color: white;
+  padding: 10px;
+}
+
+.login-button:hover {
+  background-color: hsla(201, 100%, 91%, 0.3);
+}
+
+.login-button:active {
+  background-color: hsla(201, 100%, 91%, 0.5);
+}
+
+.new-account {
+  margin: 0;
+  padding: 0;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-account a {
+  padding-top: 15px;
+  color: white;
+  font-weight: 100;
+  font-size: large;
+}
+
+/*******************************/
+@media only screen and (max-width: 870px) {
+  .new-account {
+    justify-content: space-evenly;
+  }
+  .new-account a {
+    font-weight: 500;
+    font-size: small;
+  }
+  .input-group .forgot-password {
+    font-weight: 500;
+    font-size: small;
+  }
+  .input-group label {
+    font-size: 1rem;
+  }
+  .login-button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-height: 590px) {
+  .full-screen-container {
+    background: none;
+  }
+  .login-container {
+    background: none;
+    height: 100vh;
+  }
+  .login-title {
+    color: black;
+  }
+  .login-button {
+    color: black;
+  }
+  .input-group label {
+    color: black;
+  }
+  .input-group input {
+    color: black;
+  }
+  .input-group .forgot-password {
+    color: black;
+  }
+  .error-message {
+    color: black;
+  }
+  .new-account a {
+    color: black;
+  }
+}

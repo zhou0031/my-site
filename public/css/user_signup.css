@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen-container {
+  background: linear-gradient(to top right, #f16b1e, #77d3fd);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-container {
+  background-color: hsla(201, 93%, 22%, 0.4);
+  padding: 50px 30px;
+  min-width: 400px;
+  max-width: 500px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.sign-up-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.sign-up-input-group {
+  margin: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sign-up-input-group input {
+  font-size: 1.5em;
+  padding: 0.1em 0.25em;
+  background-color: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(192, 24%, 68%);
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 100;
+  width: 100%;
+}
+
+.sign-up-input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%);
+}
+
+.sign-up-input-group input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.sign-up-button {
+  width: 100%;
+  padding: 10px 3px;
+  border-radius: 5px;
+  border: 1px solid hsl(201, 100%, 50%);
+  background-color: hsla(201, 100%, 50%, 0.8);
+  outline: none;
+  font-size: 1em;
+  font-weight: 100;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-button:hover {
+  background-color: hsla(201, 100%, 90%, 0.3);
+}
+.sign-up-button:active {
+  background-color: hsla(201, 100%, 90%, 0.5);
+}
+
+.cancel-link {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cancel-link a {
+  color: white;
+  font-weight: 100;
+  font-size: large;
+}
+
+.error-message {
+  background: linear-gradient(to right, #fd0000, #f1a095);
+  margin-bottom: 10px;
+  white-space: nowrap;
+  color: white;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.recaptcha {
+  padding: 0;
+  margin-bottom: 10px;
+}
+/*****************************************/
+@media only screen and (max-height: 600px) {
+  .full-screen-container {
+    background: none;
+  }
+  .sign-up-container {
+    background: none;
+    height: 100vh;
+  }
+  .sign-up-title {
+    color: black;
+  }
+  .sign-up-input-group input {
+    color: black;
+    font-size: 1.1rem;
+  }
+  .sign-up-input-group input::placeholder {
+    color: black;
+    opacity: 1;
+  }
+  .sign-up-button {
+    color: black;
+  }
+  .cancel-link a {
+    color: black;
+    font-size: 1rem;
+  }
+  .error-message {
+    color: black;
+  }
+}

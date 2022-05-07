@@ -1,0 +1,12 @@
+div(class="search-wrapper")
+    label(for="search") Search Tool
+    input(type="search" id="search"
+        placeholder="Product name / Email")
+div(class="total-sale-wrapper")
+    label(for="total-sale") Total Sales
+    div(class="sale-revenue") $90,293.29
+div(class="logout-wrapper")
+    if locals.name
+        label Hi #{locals.name}
+    form(action="/admin?_method=DELETE" method="POST")
+        button(type="submit") Log Out

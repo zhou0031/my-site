@@ -1,0 +1,16 @@
+mixin font-css
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+mixin user_signup_css
+    <link href="/css/user_signup.css" rel="stylesheet">
+
+mixin user_login_css
+    <link href="/css/user_login.css" rel="stylesheet">
+
+mixin user_index_css
+    <link href="/css/user_index.css" rel="stylesheet">
+
+mixin google-signout
+    if user.google_id
+        <script defer src="/js/google/google-auth.js"></script>
+        <script defer src="https://apis.google.com/js/platform.js?onload=init"></script>

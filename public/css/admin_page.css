@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.full-screen-flex-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e5e6e5;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 800px;
+}
+
+.left-flex-panel {
+  background-color: #302e2e;
+  color: white;
+  width: 20%;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-top: 70px;
+}
+
+.admin_menu_item a {
+  color: white;
+  text-decoration: none;
+}
+/* **************************** */
+.right-flex-panel {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+/* **************************** */
+.right-panel-header {
+  display: flex;
+  justify-content: space-between;
+}
+/* **************************** */
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0.3;
+  padding: 5px;
+}
+.search-wrapper label {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.search-wrapper input {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding: 0.25em 0.5em;
+  border: 1px, solid hsl(0, 0%, 0%);
+  outline: none;
+}
+.search-wrapper input:focus {
+  border: 1px solid hsl(187, 96%, 50%);
+}
+/* **************************** */
+.total-sale-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 5px;
+  gap: 15px;
+}
+.total-sale-wrapper .sale-revenue {
+  font-weight: bold;
+}
+/* **************************** */
+.logout-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 5px;
+  gap: 8px;
+  align-items: flex-end;
+}
+.logout-wrapper button {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+.logout-wrapper button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+/* **************************** */

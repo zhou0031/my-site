@@ -1,0 +1,25 @@
+extends ../layout/layout
+include ../partials/_user/_user_mixin
+include ../partials/_paypal/_paypal_mixin
+
+
+block css    
+    +font-css 
+    +user_index_css
+block script     
+    +google-signout
+    +paypal-sdk 
+    +paypal-button-script
+
+block body
+    div(class="header")
+        div
+            include ../partials/_signout_buttons/_signout_button
+        
+    div(id="paypal")
+
+    
+    
+    
+    
+    

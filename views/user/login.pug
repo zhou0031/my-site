@@ -1,0 +1,39 @@
+extends ../layout/layout
+include ../partials/_user/_user_mixin
+
+block meta 
+    include  ../partials/_google_auth_meta
+
+block css
+    +font-css
+    +user_login_css
+
+block script
+    <script defer src="https://www.recaptcha.net/recaptcha/api.js?"></script>
+    <script defer src="/js/google/recaptchaV3.js"></script>
+    <script defer src="/js/google/google-auth.js"></script>
+    <script defer src="/js/google/platform.js"></script>
+    
+block body
+     div(class="full-screen-container") 
+        div(class="login-container")
+            h3(class="login-title") Welcome
+            include ../partials/_errorMessages
+            form(action='/user' method="POST" id="form") 
+                div(class="input-group")
+                    label Email
+                    input(type="email" id="email" name="email" value=email)
+                div(class="input-group")    
+                    label Password
+                    input(type="password" id="password" name="password")
+                div(class="input-group")
+                    a(class="forgot-password" href="/user/passwordrecover") forgot password?
+                button(type="submit" 
+                        class="login-button g-recaptcha"
+                        data-badge="bottomleft"
+                        data-sitekey="6LeRXVkaAAAAAOb-WsEJ9Hr24GrytKSu2nDuf3tJ"
+                        data-callback='onSubmit'
+                        data-action="submit") Log in
+            div(class="new-account") 
+                a(href="/user/signup") Create a new account
+                include ../partials/_signin_buttons/_google_signin_button

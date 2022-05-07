@@ -1,0 +1,21 @@
+extends ../layout/layout
+include ../partials/_user/_user_mixin
+
+block css
+     +font-css
+     +user_signup_css
+
+block script 
+     <script defer src="https://www.recaptcha.net/recaptcha/api.js?"></script>
+
+block body
+     div(class="full-screen-container")
+          div(class="sign-up-container")
+               div(class="sign-up-title") Welcome
+               include ../partials/_errorMessages
+               form(action="/user/signup", method="POST")
+                    include ../partials/_signup_fields/_basic_signup_form_fields 
+                    include ../partials/_recaptchaV2
+                    button(class="sign-up-button") Submit
+               div(class="cancel-link")
+                    a(href="/user") Cancel

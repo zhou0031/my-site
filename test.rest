@@ -1,0 +1,43 @@
+
+POST  http://localhost:3001/signin
+Content-Type: application/json
+
+{
+    "userAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYmFzaWMiLCJjYW5Qb3N0Ijp0cnVlLCJjYW5DaGF0IjpmYWxzZSwiX2lkIjoiNjAwZTM3YmFmOGFiOTRmYWE4MDdiMDBmIiwiZW1haWwiOiJyeWFuLnoud2lsbGlhbXNAZ21haWwuY29tIiwiY3JlYXRlZE9uIjoiMjAyMS0wMS0yNVQwMzoxNTowNi45NDFaIiwiX192IjowLCJpYXQiOjE2MTYxNzMxNjV9.B0IaK7w85jRTqInLgN6LNza6cRE2Uurs5JN-EHiYseU"
+}
+
+###
+POST  http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "email":"ryan.z.williams@gmail.com",
+    "password1":"1",
+    "password":"1"
+    
+}
+
+###
+POST  http://localhost:3000/admin
+Content-Type: application/json
+
+{
+    "username":"z_yi23",
+    "password":"1"
+}
+
+###
+POST  http://localhost:3000/admin
+Content-Type: application/json
+
+{
+    "username":"z_yi23",
+    "password":"2"
+}
+###
+POST http://localhost:3000/user
+
+{
+    "email":"z_yi23",
+    "password":"1"
+}

@@ -1,0 +1,15 @@
+This repo serves as the base of almost any websites that
+need admin panel and basic authetication for admin and basic users.
+Other projects can branch off from this project to
+customize
+
+Note: Following files are not here
+.env
+/node_modules
+
+
+To get working, do following
+
+1. upload the .env file to root directory
+2. npm install
+
