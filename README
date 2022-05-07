@@ -10,6 +10,9 @@ Note: Following files are not here
 
 To get working, do following
 
-1. upload the .env file to root directory
-2. npm install
+
+1. curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+2. sudo apt-get install -y nodejs
+3. upload the .env file to root directory
+4. npm install
 
